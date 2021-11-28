@@ -1,13 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# frozen_string_literal: true
+
 Currency.create!(name: 'Bitcoin', symbol: 'BTC', multiplication_factor: '2.0', currency_id: 'bitcoin')
 Currency.create!(name: 'Ethereum', symbol: 'ETH', multiplication_factor: '20.0', currency_id: 'ethereum')
-Currency.create!(name: 'Binance Smart Chain', symbol: 'BSC', multiplication_factor: '20.0', currency_id: 'binance_smart_chain')
+Currency.create!(
+  name: 'Binance Smart Chain', symbol: 'BSC', multiplication_factor: '20.0', currency_id: 'binance_smart_chain'
+)
 Currency.create!(name: 'Bitcoin SV', symbol: 'BSV', currency_id: 'bitcoin-sv')
 
 exchange_rates_service = Services::DataGrabbers::ExchangeRates.new

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 module Services
   module DataGrabbers
     class ExchangeRates < Services::DataGrabbers::Base
-
       def initialize
         load_data
       end
@@ -15,7 +16,7 @@ module Services
       private
 
       def url
-        ENV["EXCHANGE_RATES_URL"]
+        ENV['EXCHANGE_RATES_URL']
       end
 
       def select(currecny_id)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   module DataGrabbers
     module Satoshy
@@ -16,13 +18,13 @@ module Services
         private
 
         def mining_fee
-          BigDecimal(standard.dig('miningFee', "satoshis"), 25) /
-            BigDecimal(standard.dig('miningFee', "bytes"), 25)
+          BigDecimal(standard.dig('miningFee', 'satoshis'), 25) /
+            BigDecimal(standard.dig('miningFee', 'bytes'), 25)
         end
 
         def relay_fee
-          BigDecimal(standard.dig('relayFee', "satoshis"), 25) /
-            BigDecimal(standard.dig('relayFee', "bytes"), 25)
+          BigDecimal(standard.dig('relayFee', 'satoshis'), 25) /
+            BigDecimal(standard.dig('relayFee', 'bytes'), 25)
         end
 
         def parse_body(body)
@@ -33,7 +35,7 @@ module Services
         end
 
         def url
-          ENV["SATOSHY_BITCOIN_SV_URL"]
+          ENV['SATOSHY_BITCOIN_SV_URL']
         end
       end
     end

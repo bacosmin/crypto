@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   module Calculators
     class Base
@@ -11,7 +13,7 @@ module Services
       def multisig_price
         return unless currency.multiplication_factor
 
-        (BigDecimal(price, 25) *  BigDecimal(currency.multiplication_factor, 25)).to_s
+        (BigDecimal(price, 25) * BigDecimal(currency.multiplication_factor, 25)).to_s
       end
 
       private

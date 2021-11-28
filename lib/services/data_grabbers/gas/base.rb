@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 module Services
   module DataGrabbers
     module Gas
       class Base < Services::DataGrabbers::Base
-
         def price
           result['FastGasPrice']
         end

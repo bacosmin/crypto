@@ -1,0 +1,46 @@
+require:
+  - rubocop-rake
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-thread_safety
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - '.git/**/*'
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'Gemfile.lock'
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Description: 'Checks the spacing inside array literal brackets.'
+  Enabled: false
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 10 lines of code.'
+  StyleGuide: '#short-methods'
+  Enabled: true
+  Max: 15
+
+Lint/MissingSuper:
+  Description: >-
+    This cop checks for the presence of constructors and lifecycle callbacks
+    without calls to `super`.
+  Enabled: false
+
+
+Style/FrozenStringLiteralComment:
+  Description: >-
+    Add the frozen_string_literal comment to the top of files
+    to help transition to frozen string literals by default.
+  Enabled: true
+  Exclude:
+    - Gemfile
+    - Gemfile.lock
