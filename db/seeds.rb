@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Currency.create!(name: 'Bitcoin', symbol: 'BTC', multiplication_factor: '2.0', currency_id: 'bitcoin', formula: "<satoshi_per_byte>")
+Currency.create!(name: 'Bitcoin', symbol: 'BTC', multiplication_factor: '2.0', currency_id: 'bitcoin')
 Currency.create!(name: 'Ethereum', symbol: 'ETH', multiplication_factor: '20.0', currency_id: 'ethereum')
 Currency.create!(name: 'Binance Smart Chain', symbol: 'BSC', multiplication_factor: '20.0', currency_id: 'binance_smart_chain')
 Currency.create!(name: 'Bitcoin SV', symbol: 'BSV', currency_id: 'bitcoin-sv')

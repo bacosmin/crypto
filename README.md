@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Requierments
+You need to create a web page that renders a table that contains following data:
+* Name of cryptocurrency. There will be a total of 4 of them.
+* The cost of a single transaction in USD for this cryptocurrency. Formula will be given
+below.
+* The cost of a multisig transaction in USD for this cryptocurrency. Multisig transaction
+cost is calculated by multiplying single transaction cost by some predefined factor specific to particular cryptocurrency.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ # setup
+   * install redis(suggest to use docker)
+     * docker run --restart unless-stopped -p 6379:6379 --name some-redis -d redis
+   * have ruby 2.6.2 installed
+   * install bundler
+       * gem install bundler
+   * bundle gems
+     * bundle install
+   * update database
+     * rails db:create db:migrate db:seed
+     
+# project boot 
+   * rails server 
+   * bundle exec sidekiq
+   * go to http://localhost:3000
+ 

@@ -16,10 +16,9 @@ ActiveRecord::Schema.define(version: 2021_11_27_174538) do
     t.string "name"
     t.string "symbol"
     t.string "currency_id"
-    t.string "multiplication_factor"
     t.string "transaction_cost"
     t.string "multisig_transaction_cost"
-    t.string "formula"
+    t.string "multiplication_factor"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

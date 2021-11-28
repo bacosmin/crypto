@@ -1,0 +1,3 @@
+values_calculator:
+  cron: "*/10 * * * *"
+  class: "ValuesCalculatorWorker"
