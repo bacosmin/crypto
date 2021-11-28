@@ -4,14 +4,18 @@
     <th scope="col">Name</th>
     <th scope="col">Cost per transaction</th>
     <th scope="col">Cost per multisig transaction</th>
+    <th scope="col">Updated At</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>test</td>
-    <td>test2</td>
-    <td>test3</td>
-  </tr>
+  <% @currencies.each do |c| %>
+    <tr>
+      <td><%= c.name %></td>
+      <td><%= c.transaction_cost || 'N\A' %></td>
+      <td><%= c.multisig_transaction_cost || 'N\A'%></td>
+      <td><%= c.updated_at%></td>
+    </tr>
+  <% end %>
 
   </tbody>
 </table>
